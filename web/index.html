@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PolluCheck - Is it Safe to Go Out?</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>PolluCheck 🌬️</h1>
+      <p>Real-time air quality alerts for at risk asthmaitic children</p>
+    </header>
+
+    <div class="alert-banner" id="alertBanner">
+      <!-- use JS to populate -->
+    </div>
+
+    <div class="container">
+      <div class="card">
+        <h2>Current Air Quality</h2>
+        <div id="aqiDisplay" class="aqi-good">Loading...</div>
+        <p>Location: <span id="location">Kuala Lumpur</span></p>
+      </div>
+
+      <div class="card">
+        <h2>Is it safe to go outside?</h2>
+        <button onclick="checkActivitySafety()">Check Now</button>
+        <p id="activityResult"></p>
+      </div>
+    </div>
+
+    <!-- Clean design with map integration -->
+    <div class="container">
+      <div id="map"></div>
+      <div class="card">
+        <h2>Plan Your Route</h2>
+        <input type="text" id="destination" placeholder="Enter destination" />
+        <button onclick="getRouteAQI()">Check Air Quality</button>
+      </div>
+    </div>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
+.alert-banner {
+  padding: 15px;
+  text-align: center;
+  display: none;
+}
+.alert-danger {
+  background: #ff6b6b;
+  color: white;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* AQI indicators */
+.aqi-good {
+  color: #4caf50;
+}
+.aqi-moderate {
+  color: #ffc107;
+}
+.aqi-unhealthy {
+  color: #ff5722;
+}
