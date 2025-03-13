@@ -6,41 +6,52 @@
     <title>PolluCheck - Is it Safe to Go Out?</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
+
   <body>
-    <header>
-      <h1>PolluCheck 🌬️</h1>
-      <p>Real-time air quality alerts for at risk asthmatic children</p>
-    </header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Route</a></li>
+        <li><a href="#">History</a></li>
+        <li><a href="#">Setting</a></li>
+        <li><input type="text" placeholder="Search ..." /></li>
+      </ul>
+    </nav>
 
-    <div class="alert-banner" id="alertBanner">
-      <!-- use JS to populate -->
-    </div>
-
-    <div class="container">
-      <div class="card">
-        <h2>Current Air Quality</h2>
-        <div id="aqiDisplay" class="aqi-good">Loading...</div>
-        <h2>Location:</h2>
-        <div> id="storeLocation"></div>
+    <main>
+      <div class="alert-banner" id="alertBanner">
+        <!-- use JS to populate -->
       </div>
 
-      <div class="card">
-        <h2>Is it safe to go outside?</h2>
-        <button onclick="checkActivitySafety()">Check Now</button>
-        <p id="activityResult"></p>
-      </div>
-    </div>
+      <div class="container">
+        <div class="card">
+          <h2>Current Air Quality</h2>
+          <div id="aqiDisplay" class="aqi-good">Loading...</div>
+          <h2>Location:</h2>
+          <p id="storeLocation"></p>
+        </div>
 
-    <!-- Clean design with map integration -->
-    <div class="container">
-      <div id="map"></div>
-      <div class="card">
-        <h2>Plan Your Route</h2>
-        <input type="text" id="destination" placeholder="Enter destination" />
-        <button onclick="getRouteAQI()">Check Air Quality</button>
+        <div class="card">
+          <h2>Is it safe to go outside?</h2>
+          <button onclick="checkActivitySafety()">Check Now</button>
+          <p id="activityResult"></p>
+        </div>
       </div>
-    </div>
 
-    <script src="js/app.js"></script>
+      <!-- Clean design with map integration -->
+      <div class="container">
+        <div id="map"></div>
+        <div class="card">
+          <h2>Plan Your Route</h2>
+          <input type="text" id="destination" placeholder="Enter destination" />
+          <button onclick="getRouteAQI()">Check Air Quality</button>
+        </div>
+      </div>
+      <footer>
+        <h1>PolluCheck 🌬️</h1>
+        <p>Real-time air quality alerts for at risk asthmatic children</p>
+      </footer>
+      <script src="js/app.js"></script>
+    </main>
   </body>
 </html>
